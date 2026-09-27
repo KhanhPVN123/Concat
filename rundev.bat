@@ -20,6 +20,11 @@ if errorlevel 1 (
   goto :fail
 )
 
+rem Ensure CMake is on PATH
+if exist "C:\Program Files\CMake\bin" (
+  set "PATH=C:\Program Files\CMake\bin;%PATH%"
+)
+
 for /f "tokens=*" %%v in ('cargo --version 2^>nul') do set "CARGO_VER=%%v"
 for /f "tokens=*" %%v in ('rustc --version 2^>nul') do set "RUSTC_VER=%%v"
 echo   Rustc: %RUSTC_VER%
