@@ -1,0 +1,73 @@
+format = 2
+
+[effect]
+id = "concat.perspective-3d"
+name = "3D Perspective & Zoom"
+kind = "effect"
+category = "Distort"
+order = 9
+intensity = "zoom"
+description = "3D perspective tilt and smooth camera zoom for product demos, ported from DemoForge."
+
+[[param]]
+key = "zoom"
+label = "Zoom"
+min = 100
+max = 400
+default = 100
+step = 1
+unit = "%"
+animate = true
+
+[[param]]
+key = "pitch"
+label = "Pitch (Tilt X)"
+min = -45
+max = 45
+default = 0
+step = 0.5
+unit = "°"
+animate = true
+
+[[param]]
+key = "yaw"
+label = "Yaw (Tilt Y)"
+min = -45
+max = 45
+default = 0
+step = 0.5
+unit = "°"
+animate = true
+
+[[param]]
+key = "focus_x"
+label = "Focus X"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+animate = true
+
+[[param]]
+key = "focus_y"
+label = "Focus Y"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+animate = true
+
+[[param]]
+key = "perspective"
+label = "Perspective Distance"
+min = 500
+max = 3000
+default = 1200
+step = 10
+animate = true
+
+[wgsl]
+entry = "effect.wgsl"
+space = "linear"

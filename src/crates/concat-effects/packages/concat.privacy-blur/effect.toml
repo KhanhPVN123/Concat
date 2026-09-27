@@ -1,0 +1,74 @@
+format = 2
+
+[effect]
+id = "concat.privacy-blur"
+name = "Privacy Blur"
+kind = "effect"
+category = "Blur"
+order = 28
+intensity = "amount"
+description = "Blurs a defined rectangular area to redact sensitive information like passwords, API keys, or personal details."
+
+[[param]]
+key = "amount"
+label = "Blur Strength"
+min = 1
+max = 100
+default = 30
+step = 1
+unit = "%"
+animate = true
+
+[[param]]
+key = "x"
+label = "Centre X"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+animate = true
+
+[[param]]
+key = "y"
+label = "Centre Y"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+animate = true
+
+[[param]]
+key = "w"
+label = "Width"
+min = 1
+max = 100
+default = 30
+step = 1
+unit = "%"
+animate = true
+
+[[param]]
+key = "h"
+label = "Height"
+min = 1
+max = 100
+default = 15
+step = 1
+unit = "%"
+animate = true
+
+[[param]]
+key = "feather"
+label = "Edge Feather"
+min = 0
+max = 50
+default = 10
+step = 1
+unit = "%"
+animate = true
+
+[wgsl]
+entry = "effect.wgsl"
+space = "linear"

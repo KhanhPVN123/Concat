@@ -1,0 +1,64 @@
+format = 2
+
+[effect]
+id = "concat.spotlight"
+name = "Spotlight"
+kind = "effect"
+category = "Light"
+order = 12
+intensity = "dim"
+description = "Dims the scene outside a circular area to emphasize cursor actions and product features."
+
+[[param]]
+key = "dim"
+label = "Dim Amount"
+min = 0
+max = 100
+default = 60
+step = 1
+unit = "%"
+animate = true
+
+[[param]]
+key = "x"
+label = "Centre X"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+animate = true
+
+[[param]]
+key = "y"
+label = "Centre Y"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+animate = true
+
+[[param]]
+key = "radius"
+label = "Radius"
+min = 5
+max = 80
+default = 20
+step = 1
+unit = "%"
+animate = true
+
+[[param]]
+key = "feather"
+label = "Edge Feather"
+min = 1
+max = 100
+default = 40
+step = 1
+unit = "%"
+animate = true
+
+[wgsl]
+entry = "effect.wgsl"
+space = "linear"

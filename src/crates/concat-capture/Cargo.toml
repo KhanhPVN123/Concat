@@ -1,0 +1,17 @@
+[package]
+name = "concat-capture"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Screen recording, cursor telemetry monitoring and auto-zoom generation, ported from DemoForge."
+
+[dependencies]
+concat-core.workspace = true
+serde = { version = "1", features = ["derive"] }
+serde_json.workspace = true
+thiserror.workspace = true
+log = "0.4"
+
+[lints]
+workspace = true

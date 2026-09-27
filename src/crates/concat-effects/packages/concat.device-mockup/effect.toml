@@ -1,0 +1,64 @@
+format = 2
+
+[effect]
+id = "concat.device-mockup"
+name = "Device Mockup & Canvas"
+kind = "effect"
+category = "Distort"
+order = 10
+intensity = "padding"
+description = "Places video inside a styled device mockup (browser window or clean card) with drop shadow and gradient canvas background."
+
+[[param]]
+key = "padding"
+label = "Canvas Padding"
+min = 0
+max = 40
+default = 0
+step = 1
+unit = "%"
+animate = true
+
+[[param]]
+key = "radius"
+label = "Corner Radius"
+min = 0
+max = 30
+default = 10
+step = 1
+unit = "%"
+animate = true
+
+[[param]]
+key = "shadow"
+label = "Drop Shadow"
+min = 0
+max = 100
+default = 50
+step = 1
+unit = "%"
+animate = true
+
+[[param]]
+key = "header"
+label = "Titlebar / Window Frame"
+type = "enum"
+min = 0
+max = 1
+default = 1
+values = [0, 1]
+labels = ["Clean Rounded Card", "Browser Window"]
+
+[[param]]
+key = "bg_style"
+label = "Background Gradient"
+type = "enum"
+min = 0
+max = 3
+default = 0
+values = [0, 1, 2, 3]
+labels = ["Deep Indigo", "Sunset Glow", "Dark Minimalist", "Ocean Wave"]
+
+[wgsl]
+entry = "effect.wgsl"
+space = "linear"
